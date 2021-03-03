@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--this for nivagation bar on right page-->
+    <section class= "banner" id="sec">
+        <header>
+            <a href="#" class="logo">logo</a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+    <div class="container">
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h1><em>2018</em></h1>
+                <h2>card one</h2>
+                <p>In this year, 
+                I started studying smart phones (Android and iOS) and I can solve system problems
+                 and some hardware problems, such as rooted Android phones or jailbreaking for iPhones and many more.</p>
+            </div>            
+        </div>
+ 
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <h1><em>2019</em></h1>
+                <h2>card tow</h2>
+                <p>In this year,
+                 I began studying computers as a Windows operating system and solving problems
+                  related to the software and hardware, as I can now disassemble and assemble the computer completely</p>
+            </div>            
+        </div>
+
+        <div class="box">
+            <span></span>
+            <div class="content">
+                <div id="thread">
+                <h1><em>2020</em></h1>
+                 </div>
+                <div id="thread2">
+                <h2>card three</h2>
+                 </div>
+                <p>
+                    <div id="paragraph">
+                    Now that I have developed my skills with computers and phones,
+                     I started to learn programming, specifically programming & design web pages, this page is an example of that in html , css and javascript, languags
+                      and I am now in the website design phase.
+                </p>
+
+
+                    </div>
+            </div>            
+        </div>
+    </div>
+</section>
+    <div id="navigation">
+        <ul>
+        <li><a href="test.html">Home</a></li>
+        <li><a href="Biography.html">biography</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">projects</a></li>
+        </ul>
+    </div>
+
+<script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById("sec");
+            var nav = document.getElementById("navigation");
+            sec.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+        alert("there was a problem on this page i`ll fix that soon");
+        if (x > 10) {
+        var snd = new Audio('Beep.mp3');
+        snd.play();
+    }
+        </script>
+</body>
+</html>

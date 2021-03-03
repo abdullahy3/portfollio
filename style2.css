@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200, 300, 400, 500, 600,700,800, 900 &display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:poppins, sans-serif ;
+}
+/*this background animation just for design and testing*/ 
+body
+{
+    background: linear-gradient(-45deg ,#ee7752, #e73c7e, #23a6d5,#23d5ab,#000);
+    background-size: 400%,400%;
+    animation: gradient 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+@keyframes gradient{
+    0%{
+        background-position:0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+      100%{
+          background-position:0% 50%;
+      }
+    }    
+
+/* this is for nivagation bar style*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 10000;
+    transition: 0.6s;
+}
+header .logo
+{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header #toggle
+{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+header #toggle::before
+{
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 2px;
+    background:#fff
+    
+}
+header #toggle::after
+{
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background:#fff
+}
+.banner.active header #toggle:before
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+}
+.banner.active header #toggle:after
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+   min-height: 200vh;
+    padding: 80px;
+    display:inline-table;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+.banner.active
+{
+    transform: translateX(-400px);
+}
+
+#navigation
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100vh;
+    background: #ca0f0f; 
+    z-index: 1; 
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+#navigation.active
+{
+    right: 0;
+}
+#navigation ul
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+#navigation ul li
+{
+    list-style: none;
+}
+#navigation ul li a 
+{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size:2em;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+@media (max-width:767px)
+{
+    header{
+        padding: 20px 50px;
+    }
+    .banner{
+        padding: 100px 50px 150px;
+    }
+    .banner .content p,
+    .banner .content a
+    {
+        font-size: 1em;
+    }
+    .banner.active
+    {
+        transform: translateX(-250px);
+    }
+    #navigation
+    {
+        width: 250px;
+    }
+    #navigation ul li a 
+    {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-wrap: wrap;
+}
+.container .box
+{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    color: #fff;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+    transition: 0.5s;
+} 
+.container .box:hover
+{
+    transform: translateY(-20px);
+}
+.container .box::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+.container .box::after
+{
+    content:  '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+    filter: blur(40px);
+
+}
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after
+{
+    background: linear-gradient(315deg,#03a9f4,#ff0058);
+}
+.container .box:nth-child(3)::before,
+.container .box:nth-child(3)::after
+{
+    background: linear-gradient(315deg,#4dff03, #00d0ff);
+}
+.container .box span
+{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;   
+   /* background: rgba(red, green, blue, alpha);*/
+    z-index: 2;
+    background: rgba(0,0,0,0.6);
+}
+.container .box span::before
+{
+    content: '';
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.1);
+    pointer-events: none;
+}
+.container .box .content
+{
+    position: relative;
+    z-index: 10;
+    padding: 20px 40px;
+}
+
+.container .box .content h2
+{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.container .box .content h1
+{
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top: -20px;
+    left: 2em;
+    right: 0;
+    color: #132dc0;
+}
+/*.container .box .content h1.thread
+{
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top: -20px;
+    left: 2em;
+    right: auto;
+}*/
+#thread  /*this is for (2020 box) = h1*/
+{
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top: -4px;
+    margin-bottom: auto;
+    left: 1em;
+    right: auto;
+}
+#thread2 /*this is for h2 ( Card htree) on the thread box*/
+{
+    font-size: 1em;
+    top: -4px;
+    margin-bottom: auto;
+    position:relative;
+}
+.container .box .content p
+{
+    font-size:1em;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+#paragraph
+{
+    font-size: 0.9em;
+    top: 15px;
+    color: #fff;
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+/* edit link for <a> tag to home page*/
+.back
+{
+    position:relative; 
+    top: 310px;
+    right: 50%;
+    flex-direction: column;
+}
+.back a
+{
+    color: #000;
+    padding: 8px 15px;
+    background: #fff;
+    position:relative;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-weight: 800;
+}

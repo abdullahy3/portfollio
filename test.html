@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel = "stylesheet" href="style.css">
+    <title>Portfollio landing page</title>
+</head>
+<body>
+<section class= "banner" id="sec">
+    <header>
+        <a href="#" class="logo">logo</a>
+        <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hello World<br>I`m <span> Abdullah Yagi</span></h2>
+            <p>this is my first portfoilo & first web site for me
+             here my biography and my work (webpage projects or more) on this website.</p>
+                <a href="Biography.html">know more</a>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/profile.php?id=100012192096674"><img src="Facebook.png"></a></li>
+                    <li><a href="#"><img src="twitter.png"></a></li>
+                    <li><a href="https://www.instagram.com/abu_rabeea/"><img src="instagram.png"></a></li>                   
+                </ul>
+        </section>
+        <div id="navigation">
+            <ul>
+            <li><a href="test.html">Home</a></li>
+            <li><a href="Biography.html">biography</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">projects</a></li>
+            </ul>
+        </div>
+        <script type="text/javascript">
+        function toggle(){
+            var sec = document.getElementById("sec");
+            var nav = document.getElementById("navigation");
+            sec.classList.toggle("active");
+            nav.classList.toggle("active");
+        }
+
+        </script>
+           
+</body>
+</html>
